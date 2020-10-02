@@ -8,7 +8,7 @@ from email.mime.application import MIMEApplication
 app = Flask(__name__)
 
 def send_test_mail(email, body):
-    sender_email = "ted.thie@outlook.com"
+    sender_email = "revlytics@gmail.com"
     receiver_email = email
 
     msg = MIMEMultipart()
@@ -24,10 +24,10 @@ def send_test_mail(email, body):
     msg.attach(pdf)
 
     try:
-        with smtplib.SMTP('smtp.office365.com', 25) as smtpObj:
+        with smtplib.SMTP('smtp.gmail.com', 587) as smtpObj:
             smtpObj.ehlo()
             print(smtpObj.starttls())
-            print(smtpObj.login("ted.thie@outlook.com", "Tedthie69"))
+            print(smtpObj.login("revlytics@gmail.com", "ozjaqevxrvlgyrxf"))
             smtpObj.sendmail(sender_email, receiver_email, msg.as_string())
 
         return True
