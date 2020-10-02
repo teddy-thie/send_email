@@ -24,7 +24,7 @@ def send_test_mail(email, body):
     msg.attach(pdf)
 
     try:
-        with smtplib.SMTP('smtp.office365.com', 587) as smtpObj:
+        with smtplib.SMTP('smtp.office365.com', 25) as smtpObj:
             smtpObj.ehlo()
             print(smtpObj.starttls())
             print(smtpObj.login("ted.thie@outlook.com", "Tedthie69"))
