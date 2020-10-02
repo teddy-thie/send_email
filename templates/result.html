@@ -12,21 +12,13 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="brand">FORM</h1>
+    <h1 class="brand">RESPONSE</h1>
     <div class="wrapper animated bounceInLeft">
       <div class="company-info">
-        <h3>Email Us</h3>
+        <h3>{{ result.code }}</h3>
       </div>
       <div class="contact">
-        <form method="POST" action="send">
-          <p>
-            <label>Email Address</label>
-            <input type="email" name="email">
-          </p>
-          <p class="full">
-            <button>Submit</button>
-          </p>
-        </form>
+        {{ result.msg }}
       </div>
     </div>
   </div>
