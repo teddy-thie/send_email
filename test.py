@@ -19,8 +19,8 @@ def send_test_mail(email, body):
     msgText = MIMEText('<b>%s</b>' % (body), 'html')
     msg.attach(msgText)
         
-    pdf = MIMEApplication(open("CV.pdf", 'rb').read())
-    pdf.add_header('Content-Disposition', 'attachment', filename= "CV.pdf")
+    pdf = MIMEApplication(open("doc.pdf", 'rb').read())
+    pdf.add_header('Content-Disposition', 'attachment', filename= "doc.pdf")
     msg.attach(pdf)
 
     try:
